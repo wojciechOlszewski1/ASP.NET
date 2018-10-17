@@ -1,0 +1,13 @@
+﻿@model List<Lab3EF.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Klienci</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+    <li>@Html.ActionLink(item.Name,"EditCustomer","Home",new {id = item.Id },"") @item.Surname @item.Phone @item.City.Name   </li>
+    }
+</ul>
